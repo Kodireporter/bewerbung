@@ -6,10 +6,12 @@
 <title>Dennis Haeger – Bewerbung</title>
 
 <style>
+
+/* Hintergrund */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e3e8ee, #f7f9fb);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +20,22 @@ body {
 
 /* Card */
 .container {
-    background: white;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
     padding: 40px;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    text-align: center;
-    max-width: 420px;
     width: 90%;
+    max-width: 420px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 /* Profilbild */
@@ -33,89 +44,99 @@ body {
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.4);
     margin-bottom: 15px;
-    border: 3px solid #eaeaea;
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 /* Name */
 h1 {
-    margin: 10px 0 8px;
+    margin: 10px 0;
+}
+
+/* Titel */
+.role {
+    font-weight: bold;
+    color: #90caf9;
+    margin-bottom: 10px;
 }
 
 /* Text */
 p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    color: #e0e0e0;
 }
 
 /* Buttons */
 .button {
     display: block;
-    margin: 10px 0;
+    margin: 12px 0;
     padding: 14px;
     border-radius: 10px;
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    transition: all 0.2s ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
+    transition: all 0.25s ease;
 }
 
 /* Farben */
-.btn-main { background: #1a73e8; }
-.btn-main:hover { background: #155ab6; }
+.btn-blue { background: #1a73e8; color: white; }
+.btn-dark { background: #222; color: white; }
+.btn-green { background: #00c853; color: white; }
+.btn-purple { background: #7c4dff; color: white; }
 
-.btn-dark { background: #333; }
-.btn-dark:hover { background: #111; }
-
-.btn-green { background: #0f9d58; }
-.btn-green:hover { background: #0b7d45; }
-
-.btn-purple { background: #7b61ff; }
-.btn-purple:hover { background: #5a46c7; }
+/* Hover Effekt */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    opacity: 0.95;
+}
 
 /* Kontakt */
 .contact {
     margin-top: 20px;
     font-size: 14px;
-    color: #777;
 }
 
 .contact a {
-    color: #1a73e8;
+    color: #90caf9;
     text-decoration: none;
 }
 
 .contact a:hover {
     text-decoration: underline;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- PROFILBILD -->
-    <img src="https://raw.githubusercontent.com/Kodireporter/bewerbung/main/profilbild.png" alt="Profilbild" class="profile-img">
+    <!-- WICHTIG: Bild muss im gleichen Ordner sein -->
+    <img src="profilbild.png" class="profile-img">
 
     <h1>Dennis Haeger</h1>
 
+    <div class="role">
+        Bewerber im Einzelhandel / Kundenservice
+    </div>
+
     <p>
-        Engagierter Mitarbeiter im Verkauf & Kundenservice mit technischem Verständnis.<br>
-        Belastbar, lösungsorientiert und zuverlässig – auch in stressigen Situationen.
+        Engagierter Mitarbeiter mit technischem Verständnis.<br>
+        Zuverlässig, lösungsorientiert und belastbar – auch in stressigen Situationen.
     </p>
 
-    <a class="button btn-main" href="https://kodireporter.xo.je/lebenslauf.html" target="_blank">
-        📄 Lebenslauf
+    <a class="button btn-blue" href="https://kodireporter.xo.je/lebenslauf.html" target="_blank">
+        📄 Lebenslauf ansehen
     </a>
 
     <a class="button btn-dark" href="https://github.com/Kodireporter" target="_blank">
-        💻 GitHub
+        💻 GitHub Profil
     </a>
 
     <a class="button btn-green" href="https://kodireporter.xo.je" target="_blank">
@@ -123,7 +144,7 @@ p {
     </a>
 
     <a class="button btn-purple" href="https://kodireporter.xo.je/profil.html" target="_blank">
-        👤 Profilseite
+        👤 Über mich
     </a>
 
     <a class="button btn-dark" href="https://hpunkt.home.blog/" target="_blank">
