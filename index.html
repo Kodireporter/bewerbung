@@ -1,92 +1,129 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Dennis Haeger – Bewerbung</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #eef2f7, #d9e2ec);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dennis Haeger – Bewerbung</title>
 
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-      text-align: center;
-      max-width: 420px;
-      width: 90%;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3e8ee, #f7f9fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    h1 {
-      margin-bottom: 10px;
-    }
+/* Card */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+}
 
-    .subtitle {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 15px;
-    }
+/* Profilbild */
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #eaeaea;
+}
 
-    .description {
-      font-size: 14px;
-      color: #444;
-      margin-bottom: 25px;
-      line-height: 1.5;
-    }
+/* Name */
+h1 {
+    margin: 10px 0 8px;
+}
 
-    .button {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 13px;
-      background: #1e73d8;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.2s;
-    }
+/* Text */
+p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
 
-    .button:hover {
-      background: #155bb5;
-    }
-  </style>
+/* Buttons */
+.button {
+    display: block;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* Farben */
+.btn-main { background: #1a73e8; }
+.btn-main:hover { background: #155ab6; }
+
+.btn-dark { background: #333; }
+.btn-dark:hover { background: #111; }
+
+.btn-green { background: #0f9d58; }
+.btn-green:hover { background: #0b7d45; }
+
+/* Kontakt */
+.contact {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.contact a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+</style>
+
 </head>
-
 <body>
 
-  <div class="card">
-    
-    <div class="subtitle">
-      Bewerbung als Verkäufer / Kundenberater
-    </div>
+<div class="container">
+
+    <!-- DEIN BILD HIER -->
+    <img src="https://kodireporter.xo.je/profil.jpg" alt="Profilbild" class="profile-img">
 
     <h1>Dennis Haeger</h1>
 
-    <div class="description">
-      Motivierter Mitarbeiter im Verkauf & Kundenservice<br>
-      Erfahrung mit Technik, Beratung und Kundenkommunikation<br>
-      Zuverlässig, belastbar und schnell lernfähig
+    <p>
+        Engagierter Mitarbeiter im Verkauf & Kundenservice mit technischem Verständnis.<br>
+        Belastbar, lösungsorientiert und zuverlässig – auch in stressigen Situationen.
+    </p>
+
+    <a class="button btn-main" href="https://kodireporter.xo.je/lebenslauf.html" target="_blank">
+        📄 Lebenslauf ansehen
+    </a>
+
+    <a class="button btn-dark" href="https://github.com/Kodireporter" target="_blank">
+        💻 GitHub Projekte
+    </a>
+
+    <a class="button btn-green" href="https://kodireporter.xo.je" target="_blank">
+        🌐 Eigene Projekte
+    </a>
+
+    <div class="contact">
+        📧 <a href="mailto:haegerdennis13@gmail.com">haegerdennis13@gmail.com</a>
     </div>
 
-    <a class="button" href="https://kodireporter.xo.je/lebenslauf.html" target="_blank">📄 Lebenslauf ansehen</a>
-    <a class="button" href="https://kodireporter.xo.je/profil.html" target="_blank">👤 Profil & Pitch</a>
-    <a class="button" href="https://github.com/Kodireporter" target="_blank">💻 GitHub / Projekte</a>
-    <a class="button" href="https://kodireporter.xo.je" target="_blank">🎮 Meine Website / Spiele</a>
-    <a class="button" href="https://hpunkt.home.blog/" target="_blank">📝 Blog</a>
-    <a class="button" href="https://soundcloud.com/vorschub-official" target="_blank">🎧 SoundCloud</a>
-    
-    <a class="button" href="mailto:haegerdennis13@gmail.com">✉️ Kontakt / Bewerbung senden</a>
-
-  </div>
+</div>
 
 </body>
 </html>
